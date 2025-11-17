@@ -1,0 +1,752 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;  /* makes padding and border included in width */
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  /* overflow: hidden; */
+}
+.hero {
+  position: relative;
+  width: 100%;
+  height: 80vh; /* or 100vh for full screen */
+  overflow: hidden;
+}
+
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.hero-image.active {
+  opacity: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  border-radius: 8px;
+  animation: fadeInOverlay 1.5s ease;
+}
+
+@keyframes fadeInOverlay {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.hero-headline {
+  font-family: cursive;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.hero-button {
+  padding: 10px 25px;
+  font-size: 1rem;
+  background-color: #ffcc00;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.hero-button:hover {
+  background-color: #e6b800;
+  cursor: pointer;
+}
+/* === FEATURES SECTION === */
+.features {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: 50px 0;
+}
+
+.feature {
+  width: 200px;
+}
+
+.icon-circle {
+  width: 120px; /* size of colored circle */
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  overflow: hidden; /* hides image overflow */
+}
+
+/* 🎯 THIS PART makes image fit perfectly */
+.icon-circle img {
+  width: 60%; /* adjust between 50–70% depending on image */
+  height: 60%;
+  object-fit: contain; /* keeps aspect ratio */
+  display: block;
+}
+.icon-circle:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+  background-color: #82ae46; /* 🌿 light green on hover */
+}
+
+.pink {
+  background-color: #f6c6d2;
+}
+
+.gold {
+  background-color: #f1dfb3;
+}
+
+.blue {
+  background-color: #c9e1f5;
+}
+
+.yellow {
+  background-color: #f9edb9;
+}
+
+/* Optional Hover effect */
+.icon-circle:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+.feature h3 {
+  font-size: 16px; /* smaller heading size */
+  margin-bottom: 4px; /* tighten space between h3 and p */
+}
+
+.feature p {
+  font-size: 13px; /* smaller text size */
+  margin-top: 0; /* removes extra top spacing */
+  color: #555; /* optional: softer text color */
+}
+.hero {
+  position: relative;
+  width: 100%;
+  height: auto;          /* Let it grow with content */
+  min-height: 80vh;      /* ensures hero is tall enough */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.hero-left,
+.hero-right,
+.hero-center {
+  flex: 1 1 300px;
+}
+
+/* Make absolute hero-image cover entire hero container */
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;  /* behind content */
+}
+
+
+
+/* Each Category Image Box */
+.category {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.category img {
+  width: 350px;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  border-radius: 5px;
+  transition: transform 0.4s ease;
+}
+
+.category:hover img {
+  transform: scale(1.05);
+}
+
+/* Label on Image */
+.label {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  background-color: #8dc63f;
+  color: white;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 0 3px 3px 0;
+  font-size: 14px;
+}
+
+/* Center Text */
+.hero-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Text top, image bottom */
+  align-items: center;
+}
+
+/* Content text */
+.hero-center .content {
+  text-align: center;
+}
+
+.hero-center .content h2 {
+  margin: 0 0 10px 0;
+}
+
+.hero-center .content p {
+  margin: 0 0 15px 0;
+}
+
+.shop-btn {
+  background-color: #8dc63f;
+  color: #fff;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.shop-btn:hover {
+  background-color: #76b337;
+}
+.fade-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* === PRODUCT CARDS SECTION === */
+.product-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.product-title {
+  font-size: 2.2rem;
+  color: #2e7d32;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.product-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Discount Badge */
+.discount-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #2e7d32;
+  color: #fff;
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  z-index: 2;
+}
+
+/* Image Wrapper */
+.product-image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.1);
+}
+
+/* Add to Cart Popup */
+.cart-popup {
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #2e7d32;
+  color: #fff;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.product-card:hover .cart-popup {
+  bottom: 20px;
+  opacity: 1;
+}
+
+.cart-popup i {
+  font-size: 18px;
+}
+
+/* Product Name */
+.product-name {
+  padding: 15px;
+  font-size: 1rem;
+  font-weight: 400; /* thinner font */
+  color: #222;
+  letter-spacing: 0.5px;
+}
+/* DEAL OF THE DAY SECTION */
+.deal-section {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 60px 20px;
+  gap: 60px;
+}
+
+.deal-image {
+  flex: 1;
+  max-width: 50%;
+}
+
+.deal-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.deal-content {
+  flex: 1;
+  max-width: 50%;
+}
+
+.deal-subtitle {
+  color: #8bc34a;
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.deal-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.deal-description {
+  color: #999;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.product-name-deal {
+  color: #8bc34a;
+  font-size: 36px;
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.price-container {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.original-price {
+  color: #999;
+  font-size: 20px;
+  text-decoration: line-through;
+}
+
+.sale-price {
+  color: #8bc34a;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.countdown-timer {
+  display: flex;
+  gap: 30px;
+}
+
+.time-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.time-value {
+  font-size: 48px;
+  font-weight: 700;
+  color: #8bc34a;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.time-label {
+  font-size: 12px;
+  color: #666;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Responsive Design for Deal Section */
+@media (max-width: 968px) {
+  .deal-section {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .deal-image,
+  .deal-content {
+    max-width: 100%;
+  }
+  
+  .deal-title {
+    font-size: 36px;
+  }
+  
+  .product-name-deal {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 576px) {
+  .deal-title {
+    font-size: 32px;
+  }
+  
+  .countdown-timer {
+    gap: 15px;
+  }
+  
+  .time-value {
+    font-size: 36px;
+  }
+  
+  .time-label {
+    font-size: 10px;
+  }
+}
+
+/* Optional fade-in animation */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+
+.countdown-timer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+.countdown-section h2{
+font-family: monospace;
+font-size: larger;
+}
+.timer-item {
+  background: #fff;
+  padding: 20px;
+  border-radius: 40px;
+  width: 80px;
+  transition: transform 0.3s;
+  box-shadow: 0 0 20px 10px #02a345; /* thick white shadow */
+}
+
+
+.timer-item:hover {
+  transform: scale(1.1);
+}
+
+.timer-number {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.timer-label {
+  font-size: 0.9rem;
+  margin-top: 5px;
+  color: #555;
+}
+/* === General Section === */
+.testimonial-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+  overflow: hidden;
+}
+
+.testimonial-heading {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.testimonial-slider {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.testimonial-track {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  width: 100%;
+}
+
+.testimonial-card {
+  flex: 0 0 100%; /* Each slide takes full width */
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.testimonial-image-wrapper {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #ddd;
+}
+
+.testimonial-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonial-text {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.testimonial-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.testimonial-position {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Navigation Buttons */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  padding: 5px 12px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s;
+}
+
+.nav-btn:hover {
+  background: #f0f0f0;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Dots */
+.testimonial-dots {
+  margin-top: 20px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: #ccc;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #333;
+}
+.partners-section {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.partners-logos {
+  display: flex;
+  justify-content: space-between; /* or space-evenly */
+  align-items: center;
+  flex-wrap: nowrap; /* prevent wrapping */
+  gap: 20px; /* spacing between logos */
+  max-width: 600px; /* adjust depending on total logo width */
+  margin: 0 auto;
+}
+
+.partner-logo {
+  max-width: 100px;
+  height: auto;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease-in-out;
+}
+
+.partner-logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+
+/* ✅ Mobile Responsiveness */
+@media (max-width: 768px) {
+  .testimonial-section {
+    padding: 40px 10px;
+  }
+
+  .testimonial-card {
+    padding: 10px;
+  }
+
+  .nav-btn {
+    font-size: 1.4rem;
+  }
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .hero-container,
+  .features,
+  .product-grid,
+  .countdown-timer,
+  .testimonials-track {
+    flex-direction: column;
+    align-items: center;
+  }
+  /* Hide hero section on mobile */
+@media screen and (max-width: 768px) {
+  .hero-section {
+    display: none !important;
+  }
+}
+
+
+  .category img,
+  .product-card {
+    width: 100%;
+    max-width: 300px;
+  }
+  .countdown-section{
+    height: 80vh;
+  }
+
+  .timer-item {
+    width: 70px;
+    padding: 15px;
+  }
+
+  .testimonial-card {
+    min-width: 90%;
+  }
+   .partners-logos {
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 15px;
+  }
+}

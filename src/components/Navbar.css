@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+/* Logo Styles */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #000;
+  transition: color 0.3s;
+}
+
+.logo a:hover {
+  color: #82ae46;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #333;
+  background: none;
+  border: none;
+}
+
+/* Menu Container */
+.menu-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  align-items: center;
+  margin: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.3s;
+  display: block;
+  padding: 5px 0;
+}
+
+.nav-links li a:hover {
+  color: #82ae46;
+}
+
+/* Dropdown Styles */
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.3s;
+  display: block;
+  padding: 5px 0;
+}
+
+.dropbtn:hover {
+  color: #82ae46;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  min-width: 180px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 10px 0;
+  margin-top: 10px;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.dropdown-content.active {
+  display: block;
+}
+
+.dropdown-content li {
+  padding: 0;
+}
+
+.dropdown-content li a {
+  padding: 12px 20px;
+  display: block;
+  color: #666;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: capitalize;
+  transition: all 0.3s;
+}
+
+.dropdown-content li a:hover {
+  background-color: #82ae46;
+  color: #fff;
+}
+
+/* Cart Icon */
+.cart-icon {
+  margin-left: 10px;
+}
+
+.cart-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #82ae46;
+  color: #fff !important;
+  padding: 12px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: none;
+}
+
+.cart-link:hover {
+  background-color: #6d9438 !important;
+  color: #fff !important;
+}
+
+/* Responsive Design - Tablet */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .nav-links {
+    gap: 30px;
+  }
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .menu-container {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 280px;
+    height: calc(100vh - 70px);
+    background-color: #fff;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease-in-out;
+    overflow-y: auto;
+    z-index: 999;
+  }
+
+  .menu-container.active {
+    left: 0;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .nav-links li a {
+    padding: 15px 20px;
+    display: block;
+  }
+
+  .dropbtn {
+    padding: 15px 20px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    background-color: #f9f9f9;
+    margin-top: 0;
+    padding: 0;
+    display: none;
+  }
+
+  .dropdown-content.active {
+    display: block;
+  }
+
+  .dropdown-content li a {
+    padding: 12px 20px 12px 40px;
+    font-size: 13px;
+  }
+
+  .cart-icon {
+    margin-left: 0;
+    border-top: 2px solid #82ae46;
+  }
+
+  .cart-link {
+    width: 100%;
+    justify-content: center;
+    border-radius: 0;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0 15px;
+    height: 60px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .hamburger {
+    font-size: 24px;
+  }
+
+  .menu-container {
+    top: 60px;
+    height: calc(100vh - 60px);
+  }
+}

@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.about-container {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+
+
+
+/* Background zoom animation */
+@keyframes bg-zoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
+
+/* Overlay text */
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 2;
+}
+
+/* Breadcrumb animation */
+.breadcrumb {
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fade-slide-up 1s forwards 0.5s; /* delay 0.5s */
+}
+
+/* Hero title animation */
+.hero-title {
+  font-size: 72px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fade-slide-up 1s forwards 1s; /* delay 1s */
+}
+
+/* Fade + slide-up keyframes */
+@keyframes fade-slide-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Content Section */
+.content-section {
+  padding: 100px 20px;
+  background-color: #f8f9fa;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.image-column {
+  position: relative;
+}
+
+.about-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.text-column {
+  padding: 20px 0;
+}
+
+.section-title {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 30px;
+  color: #000;
+}
+
+.section-text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.section-text:last-child {
+  margin-bottom: 0;
+}
+
+/* Shop Button */
+.shop-btn {
+  margin-top: 30px;
+  padding: 18px 45px;
+  background-color: #82ae46;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.shop-btn:hover {
+  background-color: #6d9439;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(130, 174, 70, 0.3);
+}
+
+.shop-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .content-wrapper {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  
+  .hero-title {
+    font-size: 48px;
+  }
+  
+  .section-title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: 350px;
+  }
+  
+  .hero-title {
+    font-size: 36px;
+  }
+  
+  .breadcrumb {
+    font-size: 11px;
+  }
+  
+  .content-section {
+    padding: 60px 20px;
+  }
+  
+  .section-title {
+    font-size: 28px;
+  }
+  
+  .section-text {
+    font-size: 15px;
+  }
+}
+/* CONTENT SECTION ANIMATIONS */
+.content-wrapper .image-column,
+.content-wrapper .text-column {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fade-up 1s forwards;
+}
+
+/* Delay animations separately */
+.content-wrapper .image-column {
+  animation-delay: 0.5s;
+}
+
+.content-wrapper .text-column {
+  animation-delay: 1s;
+}
+
+/* Fade + slide-up keyframes */
+@keyframes fade-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional: image hover scale */
+.about-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.about-image:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Optional: button hover animation already exists */
+.shop-btn:hover {
+  background-color: #6d9439;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(130, 174, 70, 0.3);
+}

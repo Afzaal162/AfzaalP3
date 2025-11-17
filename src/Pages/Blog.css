@@ -1,0 +1,240 @@
+/* --------------------------------------------------
+   HERO SECTION
+-------------------------------------------------- */
+.blog-hero {
+  width: 100%;
+  height: 260px;
+  position: relative;
+  /* background: url("/images/blog-banner.jpg") center/cover no-repeat; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInHero 1s ease-in-out;
+}
+
+.blog-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 20, 20, 0.45);
+}
+
+.blog-hero-title {
+  position: relative;
+  color: #fff;
+  font-size: 44px;
+  font-weight: 700;
+  z-index: 2;
+  letter-spacing: 1px;
+}
+
+/* --------------------------------------------------
+   PAGE LAYOUT
+-------------------------------------------------- */
+.blog-container {
+  display: flex;
+  gap: 40px;
+  padding: 60px 10%;
+}
+
+.blogs-section {
+  flex: 3;
+}
+
+.sidebar {
+  flex: 1.2;
+  height: fit-content;
+}
+
+/* --------------------------------------------------
+   BLOG CARD (Left Section)
+-------------------------------------------------- */
+.blog-card {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 40px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.blog-card:hover .blog-img {
+  transform: scale(1.05);
+}
+
+.blog-img {
+  width: 260px;
+  height: 180px;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: 0.4s ease;
+}
+
+.blog-content {
+  flex: 1;
+}
+
+.blog-meta {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 8px;
+}
+
+.blog-content h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.blog-content p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.read-btn {
+  padding: 9px 18px;
+  background: #82ae46;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.read-btn:hover {
+  background: #8af862;
+}
+
+/* --------------------------------------------------
+   SIDEBAR
+-------------------------------------------------- */
+.sidebar-box {
+  background: #f7f9f4;
+  padding: 25px 22px;
+  border-radius: 14px;
+  margin-bottom: 35px;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Search Box */
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #d6e8ce;
+  outline: none;
+  font-size: 15px;
+}
+
+.search-box button {
+  padding: 11px 15px;
+  background: #82ae46;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-box button:hover {
+  background: #3c8a1f;
+}
+
+/* Recent Posts */
+.sidebar h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: #333;
+}
+
+.recent-item {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.recent-item:hover {
+  transform: translateX(5px);
+}
+
+.recent-item img {
+  width: 70px;
+  height: 55px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.recent-item p {
+  font-size: 15px;
+  color: #444;
+  margin: 0;
+}
+
+/* Categories */
+.category-list {
+  border-top: 1px solid #e5e5e5;
+  padding-top: 10px;
+}
+
+.category-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #444;
+  border-bottom: 1px solid #e5e5e5;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.category-item:hover {
+  color: #4caa27;
+}
+
+/* --------------------------------------------------
+   HERO ANIMATION
+-------------------------------------------------- */
+@keyframes fadeInHero {
+  from {
+    opacity: 0;
+    transform: scale(1.03);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* --------------------------------------------------
+   RESPONSIVE
+-------------------------------------------------- */
+@media (max-width: 900px) {
+  .blog-container {
+    flex-direction: column;
+  }
+  
+  .blog-card {
+    flex-direction: column;
+  }
+
+  .blog-img {
+    width: 100%;
+    height: 220px;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+}
