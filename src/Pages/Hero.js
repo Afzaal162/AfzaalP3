@@ -4,10 +4,10 @@ import "./Hero.css";
 export default function Hero() {
   // HERO SLIDER IMAGES
   const images = [
-    "/images/Food 1.jpg",
-    "/images/Food 2.jpg",
-    "/images/Food 3.jpg",
-    "/images/Food 4.jpg",
+    `${process.env.PUBLIC_URL}/images/Food-1.jpg`,
+    `${process.env.PUBLIC_URL}/images/Food-2.jpg`,
+    `${process.env.PUBLIC_URL}/images/Food-3.jpg`,
+    `${process.env.PUBLIC_URL}/images/Food-4.jpg`,
   ];
   const [current, setCurrent] = useState(0);
 
@@ -40,14 +40,14 @@ export default function Hero() {
 
   // PRODUCT CARDS
   const cards = [
-    { id: 1, name: "Organic Vegetables", image: "/images/Organic.png", discount: "30% OFF" },
-    { id: 2, name: "Fresh Nuts", image: "/images/Nuts.png" },
-    { id: 3, name: "Healthy Salad Bowl", image: "/images/Salad.png" },
-    { id: 4, name: "Natural Fruit Juice", image: "/images/juice.png" },
-    { id: 5, name: "Strawberry", image: "/images/Strawbarry.png", discount: "20% OFF" },
-    { id: 6, name: "Avocado", image: "/images/Avacado.png" },
-    { id: 7, name: "Banana", image: "/images/Banana.png" },
-    { id: 8, name: "Apple", image: "/images/Apple.png" },
+    { id: 1, name: "Organic Vegetables", image: `${process.env.PUBLIC_URL}/images/Organic.png`, discount: "30% OFF" },
+    { id: 2, name: "Fresh Nuts", image: `${process.env.PUBLIC_URL}/images/Nuts.png` },
+    { id: 3, name: "Healthy Salad Bowl", image: `${process.env.PUBLIC_URL}/images/Salad.png` },
+    { id: 4, name: "Natural Fruit Juice", image: `${process.env.PUBLIC_URL}/images/juice.png` },
+    { id: 5, name: "Strawberry", image: `${process.env.PUBLIC_URL}/images/Strawbarry.png`, discount: "20% OFF" },
+    { id: 6, name: "Avocado", image: `${process.env.PUBLIC_URL}/images/Avacado.png` },
+    { id: 7, name: "Banana", image: `${process.env.PUBLIC_URL}/images/Banana.png` },
+    { id: 8, name: "Apple", image: `${process.env.PUBLIC_URL}/images/Apple.png` },
   ];
 
   // COUNTDOWN TIMER
@@ -153,10 +153,10 @@ export default function Hero() {
       {/* FEATURES */}
       <section className="features">
         {[
-          { icon: "/images/Transport.png", title: "FREE SHIPPING", desc: "On order over $100", color: "pink" },
-          { icon: "/images/Fresh.png", title: "ALWAYS FRESH", desc: "Product well packaged", color: "gold" },
-          { icon: "/images/Quality.png", title: "SUPERIOR QUALITY", desc: "Quality products", color: "blue" },
-          { icon: "/images/Customer.png", title: "SUPPORT", desc: "24/7 Support", color: "yellow" },
+          { icon: `${process.env.PUBLIC_URL}/images/Transport.png`, title: "FREE SHIPPING", desc: "On order over $100", color: "pink" },
+          { icon: `${process.env.PUBLIC_URL}/images/Fresh.png`, title: "ALWAYS FRESH", desc: "Product well packaged", color: "gold" },
+          { icon: `${process.env.PUBLIC_URL}/images/Quality.png`, title: "SUPERIOR QUALITY", desc: "Quality products", color: "blue" },
+          { icon: `${process.env.PUBLIC_URL}/images/Customer.png`, title: "SUPPORT", desc: "24/7 Support", color: "yellow" },
         ].map((f, i) => (
           <div className="feature fade-up" key={i} ref={addToRefs}>
             <div className={`icon-circle ${f.color}`}>
@@ -172,16 +172,16 @@ export default function Hero() {
       <section className="hero-section">
         <div className="hero-container">
           <div className="hero-left">
-            <div className="category fade-up" ref={addToRefs}><img src="/images/Fruites.jpg" alt="Fruits" /><span className="label">Fruits</span></div>
-            <div className="category fade-up" ref={addToRefs}><img src="/images/Vegetables.jpg" alt="Vegetables" /><span className="label">Vegetables</span></div>
+            <div className="category fade-up" ref={addToRefs}><img src={`${process.env.PUBLIC_URL}/images/Fruites.jpg`} alt="Fruits" /><span className="label">Fruits</span></div>
+            <div className="category fade-up" ref={addToRefs}><img src={`${process.env.PUBLIC_URL}/images/Vegetables.jpg`} alt="Vegetables" /><span className="label">Vegetables</span></div>
           </div>
           <div className="hero-center">
             <div className="content fade-up" ref={addToRefs}><h2>Vegetables</h2><p>Protect the health of every home</p><button className="shop-btn">Shop now</button></div>
-            <div className="category fade-up" ref={addToRefs}><img src="/images/fruite.jpg" alt="Juices" /><span className="label">Juices</span></div>
+            <div className="category fade-up" ref={addToRefs}><img src={`${process.env.PUBLIC_URL}/images/fruite.jpg`} alt="Juices" /><span className="label">Juices</span></div>
           </div>
           <div className="hero-right">
-            <div className="category fade-up" ref={addToRefs}><img src="/images/FruiteJuice.jpeg" alt="Juices" /><span className="label">Juices</span></div>
-            <div className="category fade-up" ref={addToRefs}><img src="/images/Nuts.webp" alt="Dried" /><span className="label">Dried</span></div>
+            <div className="category fade-up" ref={addToRefs}><img src={`${process.env.PUBLIC_URL}/images/FruiteJuice.jpeg`} alt="Juices" /><span className="label">Juices</span></div>
+            <div className="category fade-up" ref={addToRefs}><img src={`${process.env.PUBLIC_URL}/images/Nuts.webp`} alt="Dried" /><span className="label">Dried</span></div>
           </div>
         </div>
       </section>
@@ -203,7 +203,7 @@ export default function Hero() {
         </div>
       </section>
 
-      {/* DEAL OF THE DAY SECTION - REPLACED */}
+      {/* DEAL OF THE DAY */}
       <section className="deal-section">
         <div className="deal-image">
           <img 
@@ -211,21 +211,17 @@ export default function Hero() {
             alt="Fresh Vegetables" 
           />
         </div>
-        
         <div className="deal-content">
           <p className="deal-subtitle">Best Price For You</p>
           <h1 className="deal-title">Deal of the day</h1>
           <p className="deal-description">
             Far far away, behind the word mountains, far from the countries Vokalia and Consonantia
           </p>
-          
           <h2 className="product-name-deal">Spinach</h2>
-          
           <div className="price-container">
             <span className="original-price">$10</span>
             <span className="sale-price">now $5 only</span>
           </div>
-          
           <div className="countdown-timer">
             <div className="time-block">
               <span className="time-value">{timeLeft.days}</span>
@@ -251,19 +247,18 @@ export default function Hero() {
       <section className="testimonials-section">
         <TestimonialSlider />
       </section>
-      
-      {/* PROUD CUSTOMERS / PARTNERS */}
+
+      {/* PARTNERS */}
       <section className="partners-section fade-up" ref={addToRefs}>
         <h2 className="partners-heading">Our Proud Customers & Partners</h2>
         <div className="partners-logos">
-          <img src="/images/Google.jpg" alt="Google" className="partner-logo" />
-          <img src="/images/microsoft.png" alt="Microsoft" className="partner-logo" />
-          <img src="/images/tesla.jpg" alt="Tesla" className="partner-logo" />
-          <img src="/images/orcale.png" alt="Oracle" className="partner-logo" />
-          <img src="/images/amazon.png" alt="Amazon" className="partner-logo" />
+          <img src={`${process.env.PUBLIC_URL}/images/Google.jpg`} alt="Google" className="partner-logo" />
+          <img src={`${process.env.PUBLIC_URL}/images/microsoft.png`} alt="Microsoft" className="partner-logo" />
+          <img src={`${process.env.PUBLIC_URL}/images/tesla.jpg`} alt="Tesla" className="partner-logo" />
+          <img src={`${process.env.PUBLIC_URL}/images/orcale.png`} alt="Oracle" className="partner-logo" />
+          <img src={`${process.env.PUBLIC_URL}/images/amazon.png`} alt="Amazon" className="partner-logo" />
         </div>
       </section>
-
     </div>
   );
 }
