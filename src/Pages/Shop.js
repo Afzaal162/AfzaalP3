@@ -29,23 +29,24 @@ const Shop = () => {
             id: 3,
             name: 'GREEN BEANS',
             price: 120.00,
-            image: '/images/Green.webp',
+            image: 'https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?w=400&h=300&fit=crop',
             category: 'Vegetables'
         },
         {
             id: 4,
             name: 'PURPLE CABBAGE',
             price: 120.00,
-            image: '/images/Purple.jpeg',
+            image: 'https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?w=400&h=300&fit=crop',
             category: 'Vegetables'
         },
+
         {
             id: 5,
             name: 'TOMATOES',
             price: 80.00,
             originalPrice: 120.00,
             discount: '30%',
-            image: '/images/Tomato.webp',
+            image: 'https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=400&h=300&fit=crop',
             category: 'Vegetables'
         },
         {
@@ -80,11 +81,11 @@ const Shop = () => {
             <div
                 className="blog-hero"
                 style={{
-                    backgroundImage: `url('/images/Vegetables.jpg')`,
-                    backgroundSize: 'cover',       // cover the whole section
-                    backgroundPosition: 'center',  // center the image
-                    backgroundRepeat: 'no-repeat', // avoid repeating
-                    minHeight: '400px',            // adjust height as needed
+                    backgroundImage: `url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=1600&auto=format&fit=crop')`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                    minHeight: '400px',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -145,3 +146,4 @@ const Shop = () => {
 };
 
 export default Shop;
+

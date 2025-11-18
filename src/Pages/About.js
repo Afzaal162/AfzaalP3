@@ -5,16 +5,7 @@ const About = () => {
   return (
     <>
       {/* Hero Section */}
-      <div className="about-section" style={{
-        backgroundImage: `url('/images/Vegetables.jpg')`,
-        backgroundSize: 'cover',       // cover the whole section
-        backgroundPosition: 'center',  // center the image
-        backgroundRepeat: 'no-repeat', // avoid repeating
-        minHeight: '400px',            // adjust height as needed
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}>
+      <div className="about-section" >
         <div className="hero-overlay">
           <h1 className="hero-title">ABOUT US</h1>
         </div>
@@ -23,14 +14,17 @@ const About = () => {
       {/* Content Section */}
       <div className="content-section">
         <div className="content-wrapper">
+          
+          {/* Left Image */}
           <div className="image-column">
-            <img 
-              src="/images/About us.png" 
+            <img
+              src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=800&auto=format&fit=crop"
               alt="Woman with apple"
               className="about-image"
             />
           </div>
-          
+
+          {/* Right Text */}
           <div className="text-column">
             <h2 className="section-title">Welcome to FoodZone</h2>
             <p className="section-text">
@@ -45,6 +39,7 @@ const About = () => {
             </p>
             <button className="shop-btn">SHOP NOW</button>
           </div>
+
         </div>
       </div>
     </>

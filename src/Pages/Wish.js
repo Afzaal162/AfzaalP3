@@ -3,32 +3,33 @@ import { X } from 'lucide-react';
 import './Wish.css';
 
 const Wish = () => {
-  const [cartItems, setCartItems] = useState([
-    {
-      id: 1,
-      name: 'Bell Pepper',
-      description: 'Far far away, behind the word mountains, far from the countries',
-      price: 4.90,
-      quantity: 1,
-      image: 'https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?w=150&h=150&fit=crop'
-    },
-    {
-      id: 2,
-      name: 'Strawberry',
-      description: 'Far far away, behind the word mountains, far from the countries',
-      price: 15.70,
-      quantity: 1,
-      image: 'https://images.unsplash.com/photo-1464965911861-746a04b4bca6?w=150&h=150&fit=crop'
-    },
-    {
-      id: 3,
-      name: 'Green Beans',
-      description: 'Far far away, behind the word mountains, far from the countries',
-      price: 15.70,
-      quantity: 1,
-      image: '/images/Green.webp'
-    }
-  ]);
+const [cartItems, setCartItems] = useState([
+  {
+    id: 1,
+    name: 'Bell Pepper',
+    description: 'Far far away, behind the word mountains, far from the countries',
+    price: 4.90,
+    quantity: 1,
+    image: 'https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?w=150&h=150&fit=crop'
+  },
+  {
+    id: 2,
+    name: 'Strawberry',
+    description: 'Far far away, behind the word mountains, far from the countries',
+    price: 15.70,
+    quantity: 1,
+    image: 'https://images.unsplash.com/photo-1464965911861-746a04b4bca6?w=150&h=150&fit=crop'
+  },
+  {
+    id: 3,
+    name: 'Green Beans',
+    description: 'Far far away, behind the word mountains, far from the countries',
+    price: 15.70,
+    quantity: 1,
+    image: 'https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=1600&auto=format&fit=crop'
+  }
+]);
+
 
   const removeItem = (id) => {
     setCartItems(cartItems.filter(item => item.id !== id));
@@ -53,7 +54,7 @@ const Wish = () => {
     <div className="cart-container">
       {/* Hero Section */}
       <div className="hero-section1" style={{
-        backgroundImage: `url('/images/Vegetables.jpg')`,
+    backgroundImage: `url('https://images.unsplash.com/photo-1550304943-4f24f54ddde9?w=1600&auto=format&fit=crop')`,
         backgroundSize: 'cover',       // cover the whole section
         backgroundPosition: 'center',  // center the image
         backgroundRepeat: 'no-repeat', // avoid repeating

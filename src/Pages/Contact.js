@@ -5,16 +5,21 @@ const Contact = () => {
   return (
     <>
       {/* Hero Section */}
-      <div className="Contact-section" style={{
-        backgroundImage: `url('/images/Vegetables.jpg')`,
-        backgroundSize: 'cover',       // cover the whole section
-        backgroundPosition: 'center',  // center the image
-        backgroundRepeat: 'no-repeat', // avoid repeating
-        minHeight: '400px',            // adjust height as needed
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}
+      <div
+        className="blog-hero"
+        style={{
+    width: "100%",
+    height: "50vh",
+    position: "relative",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    animation: "fadeInHero 1s ease-in-out",
+    backgroundImage: `url('https://images.unsplash.com/photo-1550304943-4f24f54ddde9?w=1600&auto=format&fit=crop')`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  }}
       >
         <div className="hero-overlay">
           <h1 className="hero-title">Contact US</h1>
@@ -22,6 +27,7 @@ const Contact = () => {
       </div>
 
       <div className="contact-container">
+
         {/* Info Cards Section */}
         <div className="cards-section">
           <div className="contact-card">
@@ -44,13 +50,17 @@ const Contact = () => {
 
         {/* Contact Form Section */}
         <div className="form-section">
-          <div className="form-image">
-            <img
-              src="/images/Contact.jpg.png"
-              alt="Contact Us"
-            />
-          </div>
+          
+          {/* Left Image */}
+       <div className="form-image">
+  <img
+    src="https://images.unsplash.com/photo-1525182008055-f88b95ff7980?w=1600&auto=format&fit=crop&q=80"
+    alt="Contact Support"
+  />
+</div>
 
+
+          {/* Right Form Fields */}
           <div className="form-fields">
             <h2>Get in Touch</h2>
             <form>
@@ -63,6 +73,7 @@ const Contact = () => {
               <button type="submit" className="submit-btn">Send Message</button>
             </form>
           </div>
+
         </div>
       </div>
     </>
